@@ -65,7 +65,7 @@ if result != 0:
     print('FAILURE! entering config mode')
     exit()
 
-# Change the hostname to 'R1' (if needed)
+# Change the hostname to 'R1' 
 session.sendline('hostname R1')
 result = session.expect([r'R1\(config\)#', pexpect.TIMEOUT, pexpect.EOF])
 
@@ -73,10 +73,10 @@ result = session.expect([r'R1\(config\)#', pexpect.TIMEOUT, pexpect.EOF])
 if result != 0:
     print('---FAILURE! setting hostname')
 
-# Exit config mode (if needed)
+# Exit config mode 
 session.sendline('exit')
 
-# Exit enable mode (if needed)
+# Exit enable mode 
 session.sendline('exit')
 
 # Display success message
